@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxe Estates - Luxury Real Estate in Turkey</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1b273b",
+                        "platinum": "#E0E1DD",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#15181d",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem", 
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-primary antialiased">
+<!-- Sticky Navbar -->
+<nav class="sticky top-0 z-50 w-full border-b border-white/10 bg-primary/95 backdrop-blur-sm transition-all">
+<div class="px-6 lg:px-12 py-4 flex items-center justify-between max-w-[1400px] mx-auto">
+<div class="flex items-center gap-3 text-white">
+<a href="index.html" class="flex items-center gap-3 text-white hover:opacity-80 transition-opacity">
+<div class="p-1.5 bg-white/10 rounded">
+<span class="material-symbols-outlined text-white">apartment</span>
+</div>
+<h2 class="text-white text-xl font-bold tracking-tight">LUXE ESTATES</h2>
+</a>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="search_results.html?status=buy">Buy</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="search_results.html?status=rent">Rent</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Projects</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="about.html">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-10 px-6 items-center justify-center rounded bg-white text-primary hover:bg-platinum text-sm font-bold transition-colors shadow-lg">
+                    Contact
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<div class="relative w-full h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Modern luxury villa with infinity pool at sunset overlooking the sea" class="w-full h-full object-cover" data-alt="Luxury modern villa exterior with pool at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG3UB_FFNtj4BnwUDWisVvLb8vmTzmQY36-E8qEgoH5umniB9Kjh-TsdrxxPUbMoNK3DQdvX5aKQQF2OFfcFVMf97szP8lRHWS1a0piUCRpLD2z9ToR4mIXnyi-sIhyNOn5Y7jRFzWPu1Urjoyrxw4ybm0r9ekWmNkY3AQmDuQpwKZGaty0IbdXP-ERCBM82bvRw6e3P9YVkgxz9ZrK8z4hiwF32xzZoeabciICNW8ygixyQz1UD5AABnMjZ9Ya6On0j7oWejKm1Q"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/30 to-primary/80"></div>
+</div>
+<div class="relative z-10 container mx-auto px-4 flex flex-col items-center gap-8 text-center mt-[-60px]">
+<div class="space-y-4 max-w-3xl">
+<h1 class="text-white text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Find Your Dream Home <br/><span class="text-platinum">In Turkey</span>
+</h1>
+<p class="text-gray-200 text-lg lg:text-xl font-medium max-w-2xl mx-auto">
+                    Experience the pinnacle of luxury living with our exclusive portfolio of villas, apartments, and penthouses.
+                </p>
+</div>
+<!-- Advanced Search Bar -->
+<div class="w-full max-w-5xl mt-8">
+<form action="search_results.html" method="GET" class="bg-white/95 backdrop-blur-md p-4 lg:p-6 rounded-lg shadow-2xl flex flex-col lg:flex-row gap-4 items-end">
+<!-- Location Input -->
+<div class="flex-1 w-full flex flex-col gap-1.5 text-left">
+<label class="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">Location</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">location_on</span>
+<input name="location" class="w-full h-12 pl-10 pr-4 bg-gray-50 border border-gray-200 rounded text-primary placeholder:text-gray-400 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all hover:bg-white" placeholder="Istanbul, Bodrum..." type="text"/>
+</div>
+</div>
+<!-- Property Type -->
+<div class="flex-1 w-full flex flex-col gap-1.5 text-left">
+<label class="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">Type</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">home</span>
+<select name="type" class="w-full h-12 pl-10 pr-4 bg-gray-50 border border-gray-200 rounded text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none appearance-none transition-all hover:bg-white cursor-pointer">
+<option value="">All Types</option>
+<option value="villa">Villa</option>
+<option value="apartment">Apartment</option>
+<option value="penthouse">Penthouse</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Price Range -->
+<div class="flex-1 w-full flex flex-col gap-1.5 text-left">
+<label class="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">Price Range</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">payments</span>
+<select name="price" class="w-full h-12 pl-10 pr-4 bg-gray-50 border border-gray-200 rounded text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none appearance-none transition-all hover:bg-white cursor-pointer">
+<option value="">Any Price</option>
+<option value="0-1m">Up to 1M ₺</option>
+<option value="1m-5m">1M - 5M ₺</option>
+<option value="5m-10m">5M - 10M ₺</option>
+<option value="10m+">10M+ ₺</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Search Button -->
+<button type="submit" class="w-full lg:w-auto h-12 px-8 bg-primary hover:bg-primary/90 text-white font-bold rounded flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+<span class="material-symbols-outlined">search</span>
+<span>Search</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+<!-- Stats Section -->
+<section class="py-12 bg-white border-b border-gray-100">
+<div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col items-center text-center">
+<span class="text-4xl font-extrabold text-primary mb-1">150+</span>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wider">Premium Listings</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="text-4xl font-extrabold text-primary mb-1">12</span>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wider">Cities Covered</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="text-4xl font-extrabold text-primary mb-1">10y</span>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wider">Experience</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="text-4xl font-extrabold text-primary mb-1">24/7</span>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wider">Support</span>
+</div>
+</div>
+</section>
+<!-- Featured Listings -->
+<section class="py-20 px-6 lg:px-12 max-w-[1400px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="space-y-2">
+<h3 class="text-primary/60 font-bold uppercase tracking-wider text-sm">Exclusive Portfolio</h3>
+<h2 class="text-primary text-3xl lg:text-4xl font-extrabold tracking-tight">Featured Listings</h2>
+</div>
+<a class="group flex items-center gap-2 text-primary font-bold hover:opacity-70 transition-opacity" href="search_results.html">
+                View All Properties
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Listing Card 1 -->
+<a href="details.html" class="group bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img alt="Modern white luxury villa exterior with pool" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern white villa exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNaYBL4pPD0bmlsoKMIbKaCN-q1UjKHno3Y2AxaBFC4LrY5t5stkAGOC1-iuzoc53YmK4aMzrqomXzLF8qUAMhyMRj7XduAfkNnlXWtLz22Smg6G1PTtYSodb9W7-jA5Toq0tCGXXGqntYrpL_JhrGBJbyTipD5KlOCZ-WM8KUmFUzbJmSIMeADoJ6R04u6-I5UPJqQInnUw1eRbv8yM3-lWYMbVs01ZoqKopglxA00QZzeY5AAU2oe6Gqund17lhmTv5-_Uvb_Q0"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">
+                        For Sale
+                    </div>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-colors cursor-pointer shadow-lg">
+<span class="material-symbols-outlined block text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-primary truncate pr-2">Bosphorus View Villa</h3>
+<p class="text-lg font-extrabold text-primary whitespace-nowrap">$2,500,000</p>
+</div>
+<div class="flex items-center gap-1 text-gray-500 text-sm mb-6">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                        Istanbul, Sariyer
+                    </div>
+<div class="mt-auto grid grid-cols-3 gap-4 py-4 border-t border-gray-100">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400">bed</span>
+<span class="text-sm font-bold text-primary">5 Bed</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400">bathtub</span>
+<span class="text-sm font-bold text-primary">4 Bath</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400">square_foot</span>
+<span class="text-sm font-bold text-primary">450 m²</span>
+</div>
+</div>
+</div>
+</a>
+<!-- Listing Card 2 -->
+<a href="details.html" class="group bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img alt="Interior living room with large glass windows and sea view" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern living room interior with sea view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz5CzcYHr3mCtt1VoI-iDnCBNsssFJqwk-9N8jqZfMEq5ICvWClL4r9HFfP47f5navmkSewG90tw6YpeGEBywj-DmAay45CSYjrloWCXPyxtqJQBUT__rcOUmSx6jDGOWWjslJqmd_-Dpr6Iq3nA52xM-GeGNGlNs1MXmbAGQ9R3FkyalgHaWYT-bGfRX2O-9b5_RCxVFOXiRF9wgi5VlNQczgT8xH9j1VkgFUwknjESES0If_pHu_S_wpk8LqRMwqOmypsLgGnBY"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">
+                        For Sale
+                    </div>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-colors cursor-pointer shadow-lg">
+<span class="material-symbols-outlined block text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-primary truncate pr-2">Seaside Mansion</h3>
+<p class="text-lg font-extrabold text-primary whitespace-nowrap">$4,200,000</p>
+</div>
+<div class="flex items-center gap-1 text-gray-500 text-sm mb-6">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                        Bodrum, Yalikavak
+                    </div>
+<div class="mt-auto grid grid-cols-3 gap-4 py-4 border-t border-gray-100">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400">bed</span>
+<span class="text-sm font-bold text-primary">6 Bed</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400">bathtub</span>
+<span class="text-sm font-bold text-primary">6 Bath</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400">square_foot</span>
+<span class="text-sm font-bold text-primary">600 m²</span>
+</div>
+</div>
+</div>
+</a>
+<!-- Listing Card 3 -->
+<a href="details.html" class="group bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img alt="High rise modern apartment building exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern apartment building exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlwn7K899CAP16PuZ3LaSPug1EHT9kUDjv9F1RYskLfM1HzXtJxmRJHDElCXNSRzlHBL2DmHGXysh4YOHVbNIwnqKZei9qsz_vpqe-gljq3exGFdN72qH1L6Ih1C_huroS5cmu-PTNB4b0kKESRaSQVN6GFQFluvDxSBjMjoLYJAgcqRoafOMJgZ-EWmg1X_u0nZVLFmUqVVE67s_wMcjVe7p2N_dFvkEpmI7dV2NAbj8t03GDrGHEMk4L4RVMiS6Ib6ySupUiTJw"/>
+<div class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">
+                        New Project
+                    </div>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-colors cursor-pointer shadow-lg">
+<span class="material-symbols-outlined block text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-primary truncate pr-2">Skyline Penthouse</h3>
+<p class="text-lg font-extrabold text-primary whitespace-nowrap">$1,850,000</p>
+</div>
+<div class="flex items-center gap-1 text-gray-500 text-sm mb-6">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                        Istanbul, Besiktas
+                    </div>
+<div class="mt-auto grid grid-cols-3 gap-4 py-4 border-t border-gray-100">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400">bed</span>
+<span class="text-sm font-bold text-primary">3 Bed</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400">bathtub</span>
+<span class="text-sm font-bold text-primary">3 Bath</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400">square_foot</span>
+<span class="text-sm font-bold text-primary">280 m²</span>
+</div>
+</div>
+</div>
+</a>
+</div>
+</section>
+<!-- Why Choose Us / Services -->
+<section class="bg-platinum/30 py-20">
+<div class="container mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h3 class="text-primary/60 font-bold uppercase tracking-wider text-sm mb-2">Our Services</h3>
+<h2 class="text-3xl lg:text-4xl font-extrabold text-primary mb-4">Why Choose Luxe Estates?</h2>
+<p class="text-gray-600">We provide a comprehensive luxury real estate experience, guiding you through every step of your journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/5 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-3">Expert Guidance</h4>
+<p class="text-gray-500 leading-relaxed">Our team of experienced consultants offers personalized advice to help you find the perfect property that matches your lifestyle.</p>
+</div>
+<!-- Service 2 -->
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/5 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">diamond</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-3">Exclusive Portfolio</h4>
+<p class="text-gray-500 leading-relaxed">Access off-market listings and premium properties that are curated specifically for our high-net-worth clientele.</p>
+</div>
+<!-- Service 3 -->
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/5 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">gavel</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-3">Legal Assistance</h4>
+<p class="text-gray-500 leading-relaxed">Comprehensive legal support for international buyers, including citizenship by investment programs and title deed transfers.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Neighborhoods Section (Using the "Map" concept from the components list but elevated) -->
+<section class="py-20 px-6 lg:px-12 max-w-[1400px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="space-y-2">
+<h3 class="text-primary/60 font-bold uppercase tracking-wider text-sm">Discover Turkey</h3>
+<h2 class="text-primary text-3xl lg:text-4xl font-extrabold tracking-tight">Popular Neighborhoods</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-[500px] md:h-[400px]">
+<!-- Card 1 -->
+<a href="search_results.html?location=Istanbul" class="relative group rounded-lg overflow-hidden h-full cursor-pointer lg:col-span-2 block">
+<img alt="Scenic view of Bosphorus bridge in Istanbul" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-location="Istanbul" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgIVpFhBojk43LU7sldk3t2Te_3QUWwWVA5YyKkTYE46YybfXtXfcViI1P8wjkSmJ7T6YUKdOeSYv8TtnEQJ2A5xsLxQEs_Khc1hDvRtYRpCuVYKjNybkRJU0u_RSPQD6n4wUD_78YMGuaZUJyn43oTXeKZM926_i0MH984X36NUJ0I6bWr1-TYu--OTSdYkacdkKHVLziHgMCmbeJTpx_1tObhV2DyG_kWOaTf1e39623EXnuMvDHXiGyukTNCQF48FOzRUYMOok"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-bold mb-1">Istanbul</h3>
+<p class="text-sm font-medium opacity-90">145 Properties</p>
+</div>
+</a>
+<!-- Card 2 -->
+<a href="search_results.html?location=Bodrum" class="relative group rounded-lg overflow-hidden h-full cursor-pointer block">
+<img alt="Aerial view of Bodrum coastline with boats" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-location="Bodrum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNrwoXB_TUc9UrZMTqoKnqpepLB3R7r2XeDc85apgb1dGnufNO3S6mdV-NGTG7O3GtDvs1CyOhJtziLiN03taGZaYOM9oms_hqc-MSmif1tzIVdE95HXnpQbvfOQFiKD2G-nQ-7tCgkyCixB57x2iBIj6w2iXaz9Cn-d9gKrcXrDHgmK2brwliVmvj6M0a9LlhMfP4clWQ_sJddnWBUsK5bKxJkWKDQdoK_UI6drfXEPFVCFo_8bc4IHBCQwYriUTVUQiUONomV6g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-xl font-bold mb-1">Bodrum</h3>
+<p class="text-sm font-medium opacity-90">56 Properties</p>
+</div>
+</a>
+<!-- Card 3 -->
+<a href="search_results.html?location=Antalya" class="relative group rounded-lg overflow-hidden h-full cursor-pointer block">
+<img alt="Antalya waterfall and nature scene" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-location="Antalya" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0OXWQFwJiInAx5YoCd0BRO_4JLsAGP3obHcYjhUewaPkxjeIo918q-1Cw9r1FCjYFOV-x3aHz0yupqH6EbCP23XAL_LhAryhcmW_LKpSDH6OFnBkpOkATeas-40dpUwaDGBQo5cMN4RNUfKJOhoOWBOkirbJRRfzQYCeAgDc1dxSaJoHFZ0VGKTGjlTmiVB2rAoGMDm3XbeGOtAqypKewAmkllthHSnF7lRwfUlnT-_-w_uJbzxaHPtHS26HjL_LXASRhpFkeAZU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-xl font-bold mb-1">Antalya</h3>
+<p class="text-sm font-medium opacity-90">82 Properties</p>
+</div>
+</a>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="bg-primary py-20 px-6">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl lg:text-4xl font-extrabold text-white mb-4">Unlock Off-Market Opportunities</h2>
+<p class="text-gray-300 mb-10 text-lg">Join our exclusive network to receive private listings and market insights before they hit the public market.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-grow h-12 px-5 rounded bg-white/10 border border-white/20 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-white/50 focus:border-transparent outline-none transition-all" placeholder="Your email address" type="email"/>
+<button class="h-12 px-8 rounded bg-white text-primary font-bold hover:bg-platinum transition-colors whitespace-nowrap" type="button">
+                    Join Now
+                </button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#151e2e] text-white pt-20 pb-10 border-t border-white/5">
+<div class="container mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<!-- Brand -->
+<div class="space-y-4">
+<a href="index.html" class="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-white">apartment</span>
+<h2 class="text-lg font-bold">LUXE ESTATES</h2>
+</a>
+<p class="text-gray-400 text-sm leading-relaxed">
+                        Luxe Estates is Turkey's premier luxury real estate agency, dedicated to providing exceptional service for high-net-worth individuals.
+                    </p>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-gray-400 hover:text-white transition-colors text-sm" href="search_results.html?status=buy">Properties for Sale</a></li>
+<li><a class="text-gray-400 hover:text-white transition-colors text-sm" href="search_results.html?status=rent">Properties for Rent</a></li>
+<li><a class="text-gray-400 hover:text-white transition-colors text-sm" href="#">New Projects</a></li>
+<li><a class="text-gray-400 hover:text-white transition-colors text-sm" href="#">Citizenship by Investment</a></li>
+</ul>
+</div>
+<!-- Company -->
+<div>
+<h4 class="text-lg font-bold mb-6">Company</h4>
+<ul class="space-y-3">
+<li><a class="text-gray-400 hover:text-white transition-colors text-sm" href="about.html">About Us</a></li>
+<li><a class="text-gray-400 hover:text-white transition-colors text-sm" href="#">Our Team</a></li>
+<li><a class="text-gray-400 hover:text-white transition-colors text-sm" href="#">Careers</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="text-lg font-bold mb-6">Contact Us</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gray-500 text-sm mt-0.5">location_on</span>
+<span class="text-gray-400 text-sm">Bebek Mah. Cevdet Pasa Cad.<br/>No: 123, Istanbul, Turkey</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-500 text-sm">call</span>
+<span class="text-gray-400 text-sm">+90 212 555 0123</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-500 text-sm">mail</span>
+<span class="text-gray-400 text-sm">info@luxeestates.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 text-sm">© 2023 Luxe Estates. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-gray-500 hover:text-white text-sm transition-colors" href="about.html">About Us</a>
+<a class="text-gray-500 hover:text-white text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-gray-500 hover:text-white text-sm transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
