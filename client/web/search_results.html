@@ -55,11 +55,10 @@
 <div class="hidden lg:flex items-center gap-8">
 <a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="search_results.html?status=buy">Buy</a>
 <a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="search_results.html?status=rent">Rent</a>
-<a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="#">Projects</a>
 <a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="about.html">About</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="flex h-10 px-6 items-center justify-center rounded bg-primary text-white hover:bg-primary/90 text-sm font-bold transition-colors shadow-lg">
+<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="flex h-10 px-6 items-center justify-center rounded bg-primary text-white hover:bg-primary/90 text-sm font-bold transition-colors shadow-lg">
                     Contact
                 </button>
 </div>
@@ -209,244 +208,12 @@
 <p class="text-slate-500 dark:text-slate-400 text-sm">Showing 1-9 of 124 results based on your filters.</p>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-10">
-<!-- Card 1 -->
-<a href="details.html" data-status="buy" class="property-card group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-platinum dark:border-slate-700 flex flex-col">
-<div class="relative aspect-[4/3] overflow-hidden bg-slate-200">
-<img alt="Modern white villa exterior with pool and glass facade" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBUnH1l1G0EJzLNdQNqR8lDdRaxtewXZ2mQMLtJXfV8qiPuTJE8zoBsO_ZLqJlVTnM-OpgUsKN2RMQ7cTL6XsCOkOBox918n1N--Aid8jBXDVbQXtMhB4xZ_vovYuTy-PeLQDP_PUoD3lQlmAtpG8izNiGPM9ma_3_gAaEApkunw1b0cSIpe8ugBL6vmYfPFT8mSN5zbHvf_Y_nyjOeeGtgC_zvOQfQOIbI9Tc1IzfanaAvdxZOmUwsl09_kFE9e5UZ9zGW3fnBos"/>
-<div class="absolute top-3 right-3">
-<button class="bg-white/80 hover:bg-white text-primary rounded-full p-2 backdrop-blur-sm transition-colors">
-<span class="material-symbols-outlined text-[20px]">favorite</span>
-</button>
+<div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-10">
+<!-- Properties will be loaded here dynamically -->
+<div class="col-span-full flex flex-col items-center justify-center py-16 gap-4 text-slate-400">
+    <span class="material-symbols-outlined animate-spin text-4xl">sync</span>
+    <span class="text-sm">Loading listings...</span>
 </div>
-<div class="absolute bottom-3 left-3">
-<span class="bg-primary/90 text-white text-xs font-bold px-3 py-1.5 rounded backdrop-blur-md">Featured</span>
-</div>
-<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="bg-white text-primary font-bold py-2.5 px-6 rounded-lg shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">Quick View</button>
-</div>
-</div>
-<div class="p-5 flex flex-col flex-1">
-<div class="flex justify-between items-start mb-2">
-<div>
-<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Bosphorus View Mansion</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-                                    Sariyer, Istanbul
-                                </p>
-</div>
-</div>
-<div class="text-2xl font-extrabold text-primary dark:text-blue-200 mb-4">
-                            8,500,000 ₺
-                        </div>
-<div class="mt-auto pt-4 border-t border-platinum dark:border-slate-700 flex justify-between items-center text-slate-600 dark:text-slate-300 text-sm font-medium">
-<div class="flex items-center gap-1.5" title="Bedrooms">
-<span class="material-symbols-outlined text-[18px]">bed</span> 5
-                            </div>
-<div class="flex items-center gap-1.5" title="Bathrooms">
-<span class="material-symbols-outlined text-[18px]">shower</span> 4
-                            </div>
-<div class="flex items-center gap-1.5" title="Area">
-<span class="material-symbols-outlined text-[18px]">square_foot</span> 450 m²
-                            </div>
-</div>
-</div>
-</a>
-<!-- Card 2 -->
-<a href="details.html" data-status="buy" class="property-card group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-platinum dark:border-slate-700 flex flex-col">
-<div class="relative aspect-[4/3] overflow-hidden bg-slate-200">
-<img alt="Luxury stone villa with garden and patio seating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCes2kQoLE7tb5-ZZ3_duJbPsZAPgXatTGffzg0MIVhdzs0fLWpAZmC3N8hS1pHvj7tXRUR6JhCbQrRA-_6kk_DNaTluXHIOYi0D0Ud_Gv-FVVLF1rXdCvPn1wlRAyIQ9-Aum0Q5GXmtS_ftWhWJGSHeRDyxJtLZe4saJ9_0N9lZtx6rtZZ9lhT1KsZh1iSzUqienWUG8l3-3aKUFEOqoFuRPW1q4UbK5V99KzzHZ68j1sNBSpnIx8h8IN_i0XAt2tqiCkatlY-Cqg"/>
-<div class="absolute top-3 right-3">
-<button class="bg-white/80 hover:bg-white text-primary rounded-full p-2 backdrop-blur-sm transition-colors">
-<span class="material-symbols-outlined text-[20px]">favorite</span>
-</button>
-</div>
-<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="bg-white text-primary font-bold py-2.5 px-6 rounded-lg shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">Quick View</button>
-</div>
-</div>
-<div class="p-5 flex flex-col flex-1">
-<div class="flex justify-between items-start mb-2">
-<div>
-<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Private Garden Villa</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-                                    Zekeriyakoy, Istanbul
-                                </p>
-</div>
-</div>
-<div class="text-2xl font-extrabold text-primary dark:text-blue-200 mb-4">
-                            6,250,000 ₺
-                        </div>
-<div class="mt-auto pt-4 border-t border-platinum dark:border-slate-700 flex justify-between items-center text-slate-600 dark:text-slate-300 text-sm font-medium">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">bed</span> 4
-                            </div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">shower</span> 3
-                            </div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">square_foot</span> 320 m²
-                            </div>
-</div>
-</div>
-</a>
-<!-- Card 3 -->
-<a href="details.html" data-status="buy" class="property-card group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-platinum dark:border-slate-700 flex flex-col">
-<div class="relative aspect-[4/3] overflow-hidden bg-slate-200">
-<img alt="Modern interior living room with large windows" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC5nFffr8sGS3Ua0zgK6oqb1XNjilCIruo-5E7Ztw5XC-Lq3N4zIO0Wa1wn4u797wc4CbexsgAYgVOr4zQZ_bC2ylV7FE1tMOQzCZeGkZajOLe90PsXQ6sqAjxRCK2vr0zOXEOsL-QuN0M09iMPLpUOi62Cn6WA7YvMNqEH-AMQvhI8fFIZ-yw8KS3ojuPZyOnGFFVGlQrNWPdgKi6_aHGcd81YKjctf1xRTVSscsDXJ3vuwh5JqUwFRDc4Gc75SwvBjvkN9mCwdU"/>
-<div class="absolute top-3 right-3">
-<button class="bg-white/80 hover:bg-white text-primary rounded-full p-2 backdrop-blur-sm transition-colors">
-<span class="material-symbols-outlined text-[20px]">favorite</span>
-</button>
-</div>
-<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="bg-white text-primary font-bold py-2.5 px-6 rounded-lg shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">Quick View</button>
-</div>
-</div>
-<div class="p-5 flex flex-col flex-1">
-<div class="flex justify-between items-start mb-2">
-<div>
-<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Modern Family Home</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-                                    Beykoz, Istanbul
-                                </p>
-</div>
-</div>
-<div class="text-2xl font-extrabold text-primary dark:text-blue-200 mb-4">
-                            9,100,000 ₺
-                        </div>
-<div class="mt-auto pt-4 border-t border-platinum dark:border-slate-700 flex justify-between items-center text-slate-600 dark:text-slate-300 text-sm font-medium">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">bed</span> 6
-                            </div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">shower</span> 5
-                            </div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">square_foot</span> 500 m²
-                            </div>
-</div>
-</div>
-</a>
-<!-- Card 4 -->
-<a href="details.html" data-status="rent" class="property-card group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-platinum dark:border-slate-700 flex flex-col">
-<div class="relative aspect-[4/3] overflow-hidden bg-slate-200">
-<img alt="Contemporary white exterior architecture with blue sky" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb20llEEMMJVLDkaH4xaTOoNoMNBV5SlQa4msMAA_4h-ze3IewHehn_ZkbnSKaeR01fMWed3x0vuqUWl4WGYQtQbUVqOGZXqygZZlXUGkOKHKiH19oYCYOkMKADAyJ_TdreSqT4ABId55KquXLp24m7NgpUCWOgmbdJErFefMRy5kp8SVU69P5XZGR1Qmi2iE16eLCY-ndoJyc6-B9_TzQoMVcTdOL4tPhnJDYKhHXzgkkqBJVFtvEtsEd44fVxh3X2Sc7wQyvwcI"/>
-<div class="absolute top-3 right-3">
-<button class="bg-white/80 hover:bg-white text-primary rounded-full p-2 backdrop-blur-sm transition-colors">
-<span class="material-symbols-outlined text-[20px]">favorite</span>
-</button>
-</div>
-<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="bg-white text-primary font-bold py-2.5 px-6 rounded-lg shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">Quick View</button>
-</div>
-</div>
-<div class="p-5 flex flex-col flex-1">
-<div class="flex justify-between items-start mb-2">
-<div>
-<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Seaside Retreat</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-                                    Tarabya, Istanbul
-                                </p>
-</div>
-</div>
-<div class="text-2xl font-extrabold text-primary dark:text-blue-200 mb-4">
-                            10,000,000 ₺
-                        </div>
-<div class="mt-auto pt-4 border-t border-platinum dark:border-slate-700 flex justify-between items-center text-slate-600 dark:text-slate-300 text-sm font-medium">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">bed</span> 4
-                            </div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">shower</span> 3
-                            </div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">square_foot</span> 280 m²
-                            </div>
-</div>
-</div>
-</a>
-<!-- Card 5 -->
-<a href="details.html" data-status="rent" class="property-card group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-platinum dark:border-slate-700 flex flex-col">
-<div class="relative aspect-[4/3] overflow-hidden bg-slate-200">
-<img alt="Classic luxury estate with manicured lawn" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxcXqPwEtsMtz21hP_VvdJA1OvJV_WXEDlq9n4-zRigj-lpree-CLrLgKPZ-eSfVfJscdxcIxfJYWjE4DiGgm4N5n8H3ozv1sf60cAaunQnP9kKyPQsV_eTcuYzzH7yewJHB3O6blp2Xd92jNsj__KhH_1PAWeuEN-08TtmhLV7_hQhwP-hpElUISEZvz7y3Y5aCCx8CetHmc431UKLu96Dpf3FfFQy1X5Xd5EU1Mn0o_0jy5gpGJudRRUB7HS8UbZSi00ZOHJtRQ"/>
-<div class="absolute top-3 right-3">
-<button class="bg-white/80 hover:bg-white text-primary rounded-full p-2 backdrop-blur-sm transition-colors">
-<span class="material-symbols-outlined text-[20px]">favorite</span>
-</button>
-</div>
-<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="bg-white text-primary font-bold py-2.5 px-6 rounded-lg shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">Quick View</button>
-</div>
-</div>
-<div class="p-5 flex flex-col flex-1">
-<div class="flex justify-between items-start mb-2">
-<div>
-<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Forest Edge Villa</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-                                    Kemerburgaz, Istanbul
-                                </p>
-</div>
-</div>
-<div class="text-2xl font-extrabold text-primary dark:text-blue-200 mb-4">
-                            7,800,000 ₺
-                        </div>
-<div class="mt-auto pt-4 border-t border-platinum dark:border-slate-700 flex justify-between items-center text-slate-600 dark:text-slate-300 text-sm font-medium">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">bed</span> 5
-                            </div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">shower</span> 4
-                            </div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">square_foot</span> 410 m²
-                            </div>
-</div>
-</div>
-</a>
-<!-- Card 6 -->
-<a href="details.html" data-status="rent" class="property-card group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-platinum dark:border-slate-700 flex flex-col">
-<div class="relative aspect-[4/3] overflow-hidden bg-slate-200">
-<img alt="High-end bedroom with large windows and city view" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNMtmrpiOOXNnUaQpXtkUNLmR2-47SLZhWt0HaLbeWWfG-oqYDPQW7-8cdSbthg8ZYVDel43hvOnBJEo88QoDK8BfBm57ktLfcDMePoTg7J5HCPpbpqWJDS9RysUgSpvor28EwQ7fm39Isw1qWyHtCzrKIoIZLX3RBpx1VmNbsEtB13A5--JycdNIuCGTI9KvbwvU1-lFNqFoTayxTsJ8iUq3PFlXTU25kcs6o_REDNZhA5T_7uh3DwGXyuWdKobf0Zv6OTFmIbGw"/>
-<div class="absolute top-3 right-3">
-<button class="bg-white/80 hover:bg-white text-primary rounded-full p-2 backdrop-blur-sm transition-colors">
-<span class="material-symbols-outlined text-[20px]">favorite</span>
-</button>
-</div>
-<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="bg-white text-primary font-bold py-2.5 px-6 rounded-lg shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">Quick View</button>
-</div>
-</div>
-<div class="p-5 flex flex-col flex-1">
-<div class="flex justify-between items-start mb-2">
-<div>
-<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Urban Luxury Living</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-                                    Etiler, Istanbul
-                                </p>
-</div>
-</div>
-<div class="text-2xl font-extrabold text-primary dark:text-blue-200 mb-4">
-                            9,500,000 ₺
-                        </div>
-<div class="mt-auto pt-4 border-t border-platinum dark:border-slate-700 flex justify-between items-center text-slate-600 dark:text-slate-300 text-sm font-medium">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">bed</span> 4
-                            </div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">shower</span> 3
-                            </div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">square_foot</span> 250 m²
-                            </div>
-</div>
-</div>
-</a>
 </div>
 <!-- Pagination -->
 <div class="flex justify-center items-center gap-2 pb-10">
@@ -489,45 +256,128 @@
 </div>
 </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        
-        const status = urlParams.get('status');
-        const location = urlParams.get('location');
-        const type = urlParams.get('type');
-        const price = urlParams.get('price');
-        const rooms = urlParams.get('rooms');
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-        // Update the title and subtitle based on status
+    const firebaseConfig = {
+        apiKey: "YOUR_FIREBASE_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "1:YOUR_MESSAGING_SENDER_ID:web:0b3e4cd52c17d0406c24bc"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const formatPrice = (price) => {
+        return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY', maximumFractionDigits: 0 }).format(price);
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+    const location = urlParams.get('location');
+    const type = urlParams.get('type');
+
+    async function loadProperties() {
+        const grid = document.getElementById('properties-grid');
         const titleEl = document.querySelector('h1.text-2xl');
         const subtitleEl = document.querySelector('p.text-slate-500.dark\\:text-slate-400.text-sm');
-        
-        if (status === 'buy') {
-            if (titleEl) titleEl.textContent = 'Properties for Sale';
-            if (subtitleEl) subtitleEl.textContent = 'Showing results for properties for sale.';
-        } else if (status === 'rent') {
-            if (titleEl) titleEl.textContent = 'Properties for Rent';
-            if (subtitleEl) subtitleEl.textContent = 'Showing results for properties for rent.';
-        } else if (location || type || price || rooms) {
-            if (titleEl) titleEl.textContent = 'Search Results';
-            let filterText = [];
-            if (location) filterText.push(location);
-            if (type) filterText.push(type);
-            if (price) filterText.push(price);
-            if (rooms) filterText.push(rooms + ' Rooms');
-            if (subtitleEl) subtitleEl.textContent = 'Showing results for: ' + filterText.join(', ');
-        } else {
-            if (titleEl) titleEl.textContent = 'All Properties';
-            if (subtitleEl) subtitleEl.textContent = 'Showing all available properties.';
+
+        try {
+            // Build query — orderBy removed to avoid composite index requirement
+            const constraints = [where('isActive', '==', true)];
+            if (status) constraints.push(where('status', '==', status));
+            if (type)   constraints.push(where('type', '==', type));
+
+            const q = query(collection(db, 'properties'), ...constraints);
+            const snapshot = await getDocs(q);
+
+            // Update title & filter pills
+            if (titleEl) {
+                titleEl.textContent = status === 'sale' ? 'Properties for Sale' :
+                                      status === 'rent' ? 'Properties for Rent' : 'All Listings';
+            }
+
+            let allProperties = [];
+            snapshot.forEach(doc => allProperties.push({ id: doc.id, ...doc.data() }));
+
+            // Sort by createdAt descending (client-side)
+            allProperties.sort((a, b) => {
+                const ta = a.createdAt?.seconds || 0;
+                const tb = b.createdAt?.seconds || 0;
+                return tb - ta;
+            });
+
+            // Client-side location filter (case insensitive)
+            if (location) {
+                const loc = location.toLowerCase();
+                allProperties = allProperties.filter(p =>
+                    (p.location?.city || '').toLowerCase().includes(loc) ||
+                    (p.location?.district || '').toLowerCase().includes(loc)
+                );
+            }
+
+            if (subtitleEl) subtitleEl.textContent = `${allProperties.length} listing(s) found.`;
+
+            if (allProperties.length === 0) {
+                grid.innerHTML = '<div class="col-span-full flex flex-col items-center justify-center py-16 gap-3 text-slate-400"><span class="material-symbols-outlined text-5xl">search_off</span><p class="font-medium">No listings found matching your criteria.</p></div>';
+                return;
+            }
+
+            grid.innerHTML = allProperties.map(property => {
+                const img = property.images && property.images.length > 0
+                    ? property.images[0]
+                    : 'https://placehold.co/800x600/e2e8f0/94a3b8?text=Resim+Yok';
+                const statusLabel = property.status === 'sale' ? 'For Sale' : 'For Rent';
+                const statusColor = property.status === 'sale' ? 'bg-primary/90' : 'bg-blue-600/90';
+
+                return `
+                <a href="details.html?id=${property.id}" class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-platinum dark:border-slate-700 flex flex-col">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-slate-200">
+                        <img alt="${property.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="${img}"/>
+                        <div class="absolute top-3 left-3">
+                            <span class="${statusColor} text-white text-xs font-bold px-3 py-1.5 rounded backdrop-blur-md">${statusLabel}</span>
+                        </div>
+                        ${property.isFeatured ? `<div class="absolute top-3 right-12"><span class="bg-yellow-500 text-white text-xs font-bold px-2 py-1.5 rounded">Featured</span></div>` : ''}
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-white text-primary font-bold py-2.5 px-6 rounded-lg shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">View Details</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">${property.title}</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5 flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                    ${property.location?.district || ''}, ${property.location?.city || ''}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-2xl font-extrabold text-primary dark:text-blue-200 mb-4">
+                            ${formatPrice(property.price)}
+                        </div>
+                        <div class="mt-auto pt-4 border-t border-platinum dark:border-slate-700 flex justify-between items-center text-slate-600 dark:text-slate-300 text-sm font-medium">
+                            <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">bed</span> ${property.bedrooms || 0}</div>
+                            <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">shower</span> ${property.bathrooms || 0}</div>
+                            <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">square_foot</span> ${property.area || 0} m²</div>
+                        </div>
+                    </div>
+                </a>`;
+            }).join('');
+
+        } catch (error) {
+            console.error("Error loading properties:", error);
+            grid.innerHTML = '<div class="col-span-full text-center text-red-500 py-12">An error occurred while loading listings.</div>';
         }
 
-        // Update the applied filters pill
+        // Update filter pills
         const filtersContainer = document.getElementById('applied-filters');
         if (filtersContainer) {
-            filtersContainer.innerHTML = ''; // Clear existing
-            
-            const addFilterPill = (text) => {
+            filtersContainer.innerHTML = '';
+            const addPill = (text) => {
                 if (filtersContainer.children.length > 0) {
                     const dot = document.createElement('span');
                     dot.className = 'text-slate-300';
@@ -539,51 +389,63 @@
                 pill.textContent = text;
                 filtersContainer.appendChild(pill);
             };
-
-            if (status === 'buy') addFilterPill('For Sale');
-            if (status === 'rent') addFilterPill('For Rent');
-            if (location) addFilterPill(location);
-            if (type) addFilterPill(type);
-            if (price) addFilterPill(price);
-            if (rooms) addFilterPill(rooms + ' Rooms');
-            
-            if (filtersContainer.children.length === 0) {
-                addFilterPill('All Properties');
-            }
+            if (status === 'sale') addPill('For Sale');
+            else if (status === 'rent') addPill('For Rent');
+            if (location) addPill(location);
+            if (type) addPill(type);
+            if (filtersContainer.children.length === 0) addPill('All Listings');
         }
 
-        // Filter cards based on status
-        const cards = document.querySelectorAll('.property-card');
-        let visibleCount = 0;
-        
-        cards.forEach(card => {
-            const cardStatus = card.getAttribute('data-status');
-            if (!status || status === cardStatus) {
-                card.style.display = 'flex';
-                visibleCount++;
-            } else {
-                card.style.display = 'none';
-            }
-        });
-        
-        // Update count in subtitle
-        if (subtitleEl) {
-            const currentText = subtitleEl.textContent;
-            subtitleEl.textContent = `Showing ${visibleCount} results. ${currentText.replace(/Showing.*results(\sfor)?/, '')}`;
-        }
-
-        // Update active state of status filter buttons
+        // Update active filter buttons
         const allBtn = document.getElementById('filter-all');
         const buyBtn = document.getElementById('filter-buy');
         const rentBtn = document.getElementById('filter-rent');
-        
-        if (status === 'buy' && buyBtn) {
-            buyBtn.className = 'flex-1 py-2 bg-primary text-white rounded text-sm font-medium border border-primary text-center';
-        } else if (status === 'rent' && rentBtn) {
-            rentBtn.className = 'flex-1 py-2 bg-primary text-white rounded text-sm font-medium border border-primary text-center';
-        } else if (allBtn) {
-            allBtn.className = 'flex-1 py-2 bg-primary text-white rounded text-sm font-medium border border-primary text-center';
-        }
-    });
+        const activeClass = 'flex-1 py-2 bg-primary text-white rounded text-sm font-medium border border-primary text-center';
+        const inactiveClass = 'flex-1 py-2 text-slate-600 dark:text-slate-300 rounded text-sm font-medium border border-platinum dark:border-slate-600 text-center hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors';
+        if (status === 'sale' && buyBtn) { buyBtn.className = activeClass; if(allBtn) allBtn.className = inactiveClass; if(rentBtn) rentBtn.className = inactiveClass; }
+        else if (status === 'rent' && rentBtn) { rentBtn.className = activeClass; if(allBtn) allBtn.className = inactiveClass; if(buyBtn) buyBtn.className = inactiveClass; }
+        else if (allBtn) { allBtn.className = activeClass; if(buyBtn) buyBtn.className = inactiveClass; if(rentBtn) rentBtn.className = inactiveClass; }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadProperties);
 </script>
+
+<!-- Contact Modal -->
+<div id="contact-modal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="document.getElementById('contact-modal').classList.add('hidden')"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-sm bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
+        <div class="flex items-center justify-between p-5 border-b border-gray-100 dark:border-slate-700">
+            <h3 class="text-lg font-bold text-primary dark:text-white">Get in Touch</h3>
+            <button onclick="document.getElementById('contact-modal').classList.add('hidden')" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col gap-4">
+            <p class="text-sm text-gray-500 dark:text-slate-400 mb-2">How would you like to contact us?</p>
+            <a href="https://wa.me/905XXXXXXXXX" target="_blank"
+               class="flex items-center gap-4 p-4 rounded-xl border-2 border-[#25D366] hover:bg-[#25D366]/5 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.859L.057 23.514a.75.75 0 0 0 .93.93l5.663-1.476A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.66-.513-5.183-1.408l-.371-.22-3.863 1.007 1.028-3.748-.242-.389A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-900 dark:text-white group-hover:text-[#25D366] transition-colors">WhatsApp</p>
+                    <p class="text-sm text-gray-400">Message us for a quick response</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-300 ml-auto">chevron_right</span>
+            </a>
+            <a href="mailto:info@luxeestates.com"
+               class="flex items-center gap-4 p-4 rounded-xl border-2 border-primary/20 hover:bg-primary/5 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-white">mail</span>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Email</p>
+                    <p class="text-sm text-gray-400">info@luxeestates.com</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-300 ml-auto">chevron_right</span>
+            </a>
+        </div>
+    </div>
+</div>
+
 </body></html>

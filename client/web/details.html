@@ -52,11 +52,10 @@
 <div class="hidden lg:flex items-center gap-8">
 <a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="search_results.html?status=buy">Buy</a>
 <a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="search_results.html?status=rent">Rent</a>
-<a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="#">Projects</a>
 <a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="about.html">About</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="flex h-10 px-6 items-center justify-center rounded bg-primary text-white hover:bg-primary/90 text-sm font-bold transition-colors shadow-lg">
+<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="flex h-10 px-6 items-center justify-center rounded bg-primary text-white hover:bg-primary/90 text-sm font-bold transition-colors shadow-lg">
                     Contact
                 </button>
 </div>
@@ -276,7 +275,7 @@
 <!-- Right Column: Sticky Sidebar -->
 <div class="lg:col-span-4 relative">
 <div class="sticky top-6 flex flex-col gap-6">
-<!-- Main Agent Card -->
+<!-- Main Contact Card -->
 <div class="bg-white dark:bg-[#1b2028] rounded-lg shadow-lg border border-platinum dark:border-gray-700 p-6 flex flex-col gap-6">
 <!-- Price & Status -->
 <div class="flex flex-col gap-2 pb-4 border-b border-platinum dark:border-gray-700">
@@ -289,31 +288,15 @@
 <h2 class="text-3xl md:text-4xl font-extrabold text-primary dark:text-white tracking-tight">$1,250,000</h2>
 <p class="text-sm text-gray-500 dark:text-gray-400">Ref: #88291</p>
 </div>
-<!-- Agent Info -->
-<div class="flex items-center gap-4">
-<div class="relative">
-<div class="size-16 rounded-full bg-cover bg-center border-2 border-white dark:border-gray-600 shadow-sm" data-alt="Portrait of real estate agent Ahmet Yilmaz in a suit" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_fisY0anDQkQ8Y5mqpLGGaprr5o2F7G-meuwqg7zULYQzYxMXf5TLcHlcq20Z6tMsMokQBNLhrN4PicnAT64ryy8-qEsAYjJcbBxoop93T4-T-9OFtb0bqcU6xkHAjFOwKmKK1zhYmI-4gJ7pvAmhF4D4cZgC4ln_lKYFa5jCYuln4GXMxp5QYXMZo4V2qmUKaqXXeeLyOtJDayff9SHtuWDGwcv1ORCWwAfa5DcMW7JkWeI8_3D3vBsHXGibXMZoUvdZ2n-L9Jc');"></div>
-<div class="absolute bottom-0 right-0 size-4 bg-green-500 border-2 border-white dark:border-gray-700 rounded-full"></div>
-</div>
-<div class="flex flex-col">
-<span class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Listing Agent</span>
-<h4 class="text-lg font-bold text-[#131416] dark:text-white">Ahmet Yilmaz</h4>
-<div class="flex items-center gap-1 text-yellow-500 text-sm">
-<span class="material-symbols-outlined text-sm fill-current">star</span>
-<span class="text-gray-600 dark:text-gray-300 font-medium">4.9</span>
-<span class="text-gray-400 text-xs">(124 reviews)</span>
-</div>
-</div>
-</div>
 <!-- Action Buttons -->
 <div class="flex flex-col gap-3">
 <button class="w-full h-12 flex items-center justify-center gap-2 rounded bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-base transition-all shadow-md">
 <span class="material-symbols-outlined">chat</span>
-                                WhatsApp Agent
+                                Contact via WhatsApp
                             </button>
-<button class="w-full h-12 flex items-center justify-center gap-2 rounded bg-primary hover:bg-primary/90 text-white font-bold text-base transition-all shadow-md">
+<button onclick="document.getElementById('tour-modal').classList.remove('hidden')" class="w-full h-12 flex items-center justify-center gap-2 rounded bg-primary hover:bg-primary/90 text-white font-bold text-base transition-all shadow-md">
 <span class="material-symbols-outlined">calendar_month</span>
-                                Schedule Tour
+                                Schedule a Tour
                             </button>
 <button class="w-full h-10 flex items-center justify-center gap-2 rounded border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-semibold text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
 <span class="material-symbols-outlined text-[18px]">mail</span>
@@ -324,90 +307,14 @@
 <p class="text-xs text-gray-400">Response time: usually within 1 hour</p>
 </div>
 </div>
-<!-- Mortgage Calculator Teaser (Optional secondary card) -->
-<div class="bg-white dark:bg-[#1b2028] rounded-lg shadow-sm border border-platinum dark:border-gray-700 p-5 hidden xl:block">
-<div class="flex items-center gap-3 mb-3">
-<div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded text-primary dark:text-blue-300">
-<span class="material-symbols-outlined">calculate</span>
-</div>
-<h4 class="font-bold text-[#131416] dark:text-white">Mortgage Calculator</h4>
-</div>
-<p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Estimate your monthly payments for this property.</p>
-<div class="flex justify-between items-end border-t border-platinum dark:border-gray-700 pt-3">
-<div>
-<p class="text-xs text-gray-400">Est. Payment</p>
-<p class="text-lg font-bold text-primary dark:text-white">$6,450<span class="text-sm font-normal text-gray-400">/mo</span></p>
-</div>
-<button class="text-sm font-bold text-primary dark:text-blue-300 hover:underline">Calculate</button>
-</div>
-</div>
-</div>
-</div>
-</div>
 <!-- Similar Properties (Bottom Section) -->
 <div class="mt-16 mb-12">
-<h3 class="text-2xl font-bold text-[#131416] dark:text-white mb-6">Similar Properties</h3>
+<h3 class="text-2xl font-bold text-[#131416] dark:text-white mb-6">Similar Listings</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Card 1 -->
-<div class="bg-white dark:bg-[#1b2028] rounded-lg overflow-hidden border border-platinum dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow group">
-<div class="relative aspect-[4/3] overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Modern villa exterior with pool and garden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRL256B3bjmAfoMeTeZSayOn7QNKwKx3d5haDFojG1ZJzY0j7OaAWb0wdIgOGwhvRwM1exUVzF8Tpwhrc3yAs_YP1ag-hGbFXW-Sj6TWC3E-_DEl290BM71Ekvr3RfDXYjoIpPirHxlexgFcwDNH3kGbWOfRwKJthVIe-Ki_ff4On8wgr4vsnGq9atTrLhsboXjxIsOwyIDOQ5XLwsmR-gwoTrsfnaFgjytiOFGUEW1hH-7VDJUi9pe8nCQ5scHudsDwGZvGtdICQ');"></div>
-<div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">FOR SALE</div>
-<div class="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">photo_camera</span> 8
-                        </div>
-</div>
-<div class="p-4 flex flex-col gap-2">
-<div class="flex justify-between items-start">
-<h4 class="text-lg font-bold text-[#131416] dark:text-white truncate">Luxury Villa in Sariyer</h4>
-<p class="text-primary dark:text-blue-300 font-bold">$2,100,000</p>
-</div>
-<p class="text-gray-500 dark:text-gray-400 text-sm truncate">Sariyer, Istanbul</p>
-<div class="flex items-center gap-4 mt-2 text-sm text-gray-600 dark:text-gray-300">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 5</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shower</span> 4</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">square_foot</span> 450m²</span>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="bg-white dark:bg-[#1b2028] rounded-lg overflow-hidden border border-platinum dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow group">
-<div class="relative aspect-[4/3] overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Contemporary apartment interior living space" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQGkf_DEG1C8hR5EqnRNMvVocD9qCBa30SPlOt3mcIgAMZKtMl3_12UUcXmNegd6Gu6n9m3O-BTXHJHuWMPZGtm0BJ0nMjXbcqgpFzGidOK4SnOELD82UaI4SXURfP__XmLURiy-e0ZHTEVu2yo6wmy6W68-xEfOiORCViPKxwh2-6UvYh_oKp1kQFExWJmoQ01mYt1jEs5z9EshKOb5SB6q-LjbYUS9KGSu6Rfv00dJ6G9FbZQKb3qVDB5O5uWQ0tc0zM84FCunc');"></div>
-<div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">FOR SALE</div>
-</div>
-<div class="p-4 flex flex-col gap-2">
-<div class="flex justify-between items-start">
-<h4 class="text-lg font-bold text-[#131416] dark:text-white truncate">Modern Flat in Nisantasi</h4>
-<p class="text-primary dark:text-blue-300 font-bold">$950,000</p>
-</div>
-<p class="text-gray-500 dark:text-gray-400 text-sm truncate">Nisantasi, Istanbul</p>
-<div class="flex items-center gap-4 mt-2 text-sm text-gray-600 dark:text-gray-300">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 3</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shower</span> 2</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">square_foot</span> 180m²</span>
-</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="bg-white dark:bg-[#1b2028] rounded-lg overflow-hidden border border-platinum dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow group hidden lg:block">
-<div class="relative aspect-[4/3] overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Classic style interior with high ceilings" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNvc6poseLsw7vM83gCDpsDQNc7KnTWZSOgo4ANCouAYgmt64gFCwrX-q-uaFyuZdbm4wypig2gGZaqcQhQ41Jr7QLOv-HNBNG7-3LWHWz4AZlQs6ucds_CKX0eH7V-F0UZ0dW8Nv4dDSMg317k6JUuLJAlcXlXLx9g6GJC9L22qexjQMQLCDa0Eh3JEHU7dl9ZwcP3-RvescbO1NfCA-LbLluZqzFX2SYK8dC1tiqVe65_5OblL8b6FO7A0KkxR2b1dDlmvakwwA');"></div>
-<div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">FOR SALE</div>
-</div>
-<div class="p-4 flex flex-col gap-2">
-<div class="flex justify-between items-start">
-<h4 class="text-lg font-bold text-[#131416] dark:text-white truncate">Historic Apartment in Galata</h4>
-<p class="text-primary dark:text-blue-300 font-bold">$1,500,000</p>
-</div>
-<p class="text-gray-500 dark:text-gray-400 text-sm truncate">Galata, Istanbul</p>
-<div class="flex items-center gap-4 mt-2 text-sm text-gray-600 dark:text-gray-300">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 3</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shower</span> 2</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">square_foot</span> 210m²</span>
-</div>
-</div>
-</div>
+    <div class="col-span-full flex items-center justify-center py-10 text-slate-400 gap-3">
+        <span class="material-symbols-outlined animate-spin text-3xl">sync</span>
+        <span class="text-sm">Loading...</span>
+    </div>
 </div>
 </div>
 </main>
@@ -428,4 +335,349 @@
 <p class="text-gray-500 dark:text-gray-400 text-sm">© 2024 Luxe Estates. All rights reserved.</p>
 </div>
 </footer>
+
+<!-- Contact Modal -->
+<div id="contact-modal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="document.getElementById('contact-modal').classList.add('hidden')"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-sm bg-white dark:bg-[#1b2028] rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
+        <div class="flex items-center justify-between p-5 border-b border-gray-100 dark:border-gray-700">
+            <h3 class="text-lg font-bold text-primary dark:text-white">Get in Touch</h3>
+            <button onclick="document.getElementById('contact-modal').classList.add('hidden')" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col gap-4">
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">How would you like to contact us?</p>
+            <a href="https://wa.me/905XXXXXXXXX" target="_blank"
+               class="flex items-center gap-4 p-4 rounded-xl border-2 border-[#25D366] hover:bg-[#25D366]/5 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.859L.057 23.514a.75.75 0 0 0 .93.93l5.663-1.476A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.66-.513-5.183-1.408l-.371-.22-3.863 1.007 1.028-3.748-.242-.389A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-900 dark:text-white group-hover:text-[#25D366] transition-colors">WhatsApp</p>
+                    <p class="text-sm text-gray-400">Message us for a quick response</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-300 ml-auto">chevron_right</span>
+            </a>
+            <a href="mailto:info@luxeestates.com"
+               class="flex items-center gap-4 p-4 rounded-xl border-2 border-primary/20 hover:bg-primary/5 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-white">mail</span>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Email</p>
+                    <p class="text-sm text-gray-400">info@luxeestates.com</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-300 ml-auto">chevron_right</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Schedule Tour Modal -->
+<div id="tour-modal" class="fixed inset-0 z-[100] hidden">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="document.getElementById('tour-modal').classList.add('hidden')"></div>
+    
+    <!-- Modal Content -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white dark:bg-[#1b2028] rounded-xl shadow-2xl border border-platinum dark:border-gray-700 overflow-hidden">
+        <div class="flex items-center justify-between p-5 border-b border-platinum dark:border-gray-700">
+            <h3 class="text-xl font-bold text-[#131416] dark:text-white">Schedule a Tour</h3>
+            <button onclick="document.getElementById('tour-modal').classList.add('hidden')" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        
+        <form id="tour-form" class="p-6 space-y-5">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name</label>
+                <input type="text" id="tour-name" required placeholder="John Smith" class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-blue-500 dark:text-white">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
+                <input type="tel" id="tour-phone" required placeholder="+90 555 123 4567" class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-blue-500 dark:text-white">
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Date</label>
+                    <input type="date" id="tour-date" required class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-blue-500 dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Time</label>
+                    <input type="time" id="tour-time" required class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-blue-500 dark:text-white">
+                </div>
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message (Optional)</label>
+                <textarea id="tour-message" rows="3" placeholder="Any special requests or questions?" class="w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-blue-500 dark:text-white"></textarea>
+            </div>
+            
+            <button type="submit" class="w-full h-12 flex items-center justify-center gap-2 rounded bg-primary hover:bg-primary/90 text-white font-bold text-base transition-all shadow-md mt-2">
+                <span class="material-symbols-outlined">send</span>
+                Request a Tour
+            </button>
+        </form>
+        
+        <!-- Success Message (Hidden by default) -->
+        <div id="tour-success" class="hidden p-8 text-center flex-col items-center justify-center gap-4">
+            <div class="size-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mx-auto mb-2">
+                <span class="material-symbols-outlined text-3xl">check_circle</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#131416] dark:text-white">Request Sent!</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">We have received your tour request. Our team will contact you shortly to confirm the appointment.</p>
+            <button onclick="document.getElementById('tour-modal').classList.add('hidden'); document.getElementById('tour-success').classList.add('hidden'); document.getElementById('tour-form').classList.remove('hidden');" class="mt-4 px-6 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-[#131416] dark:text-white font-semibold rounded-lg transition-colors">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Firebase & Property Loading -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, doc, getDoc, query, where, limit, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "YOUR_FIREBASE_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "1:YOUR_MESSAGING_SENDER_ID:web:0b3e4cd52c17d0406c24bc"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const FEATURE_ICONS = {
+        'Swimming Pool': 'pool',
+        'Private Gym': 'fitness_center',
+        'Indoor Parking': 'local_parking',
+        'Smart Home System': 'nest_cam_iq_outdoor',
+        '24/7 Security': 'security',
+        'Central Cooling': 'ac_unit',
+        'Balcony': 'balcony',
+        'Sea View': 'water',
+        'Elevator': 'elevator',
+        "Children's Playground": 'child_care',
+    };
+
+    const formatPrice = (price) =>
+        new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY', maximumFractionDigits: 0 }).format(price);
+
+    // ─── Load property data ───────────────────────────────────────────────────
+    async function loadProperty() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const propertyId = urlParams.get('id');
+
+        if (!propertyId) return; // No id → keep static demo content
+
+        const docRef = doc(db, 'properties', propertyId);
+        const docSnap = await getDoc(docRef);
+
+        if (!docSnap.exists()) {
+            document.querySelector('h1.text-3xl').textContent = 'Listing not found.';
+            return;
+        }
+
+        const p = { id: docSnap.id, ...docSnap.data() };
+
+        // ── Page title
+        document.title = `Luxe Estates - ${p.title}`;
+
+        // ── Breadcrumbs
+        const breadcrumbs = document.querySelectorAll('nav.flex.flex-wrap a');
+        if (breadcrumbs[1]) { breadcrumbs[1].textContent = p.location?.city || 'Istanbul'; breadcrumbs[1].href = `search_results.html?location=${p.location?.city || ''}`; }
+        if (breadcrumbs[2]) { breadcrumbs[2].textContent = p.location?.district || ''; breadcrumbs[2].href = `search_results.html?location=${p.location?.district || ''}`; }
+        const lastCrumb = document.querySelector('nav.flex.flex-wrap span.text-primary');
+        if (lastCrumb) lastCrumb.textContent = p.type || 'Listing';
+
+        // ── Header: badge, title, location
+        const badge = document.querySelector('span.bg-primary\\/10.text-primary');
+        if (badge) badge.textContent = p.type || 'Listing';
+        const h1 = document.querySelector('h1.text-3xl');
+        if (h1) h1.textContent = p.title;
+        const locationP = document.querySelector('p.text-gray-500.dark\\:text-gray-400.text-base');
+        if (locationP) locationP.innerHTML = `<span class="material-symbols-outlined text-[20px]">location_on</span> ${p.location?.address || ''}, ${p.location?.district || ''}, ${p.location?.city || ''}`;
+
+        // ── Gallery: main image + thumbnails
+        const fallback = 'https://placehold.co/1200x800/e2e8f0/94a3b8?text=Resim+Yok';
+        const images = (p.images && p.images.length > 0) ? p.images : [fallback];
+
+        const mainImgDiv = document.querySelector('.relative.w-full.aspect-\\[16\\/10\\] .absolute.inset-0.bg-cover');
+        if (mainImgDiv) mainImgDiv.style.backgroundImage = `url('${images[0]}')`;
+
+        const thumbGrid = document.querySelector('.grid.grid-cols-4.gap-3');
+        if (thumbGrid) {
+            thumbGrid.innerHTML = images.slice(0, 4).map((img, i) => `
+                <div class="aspect-[4/3] rounded overflow-hidden cursor-pointer ${i === 0 ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark opacity-100' : 'opacity-70 hover:opacity-100 transition-opacity'}" onclick="document.querySelector('.relative.w-full.aspect-[16/10] .absolute.inset-0.bg-cover').style.backgroundImage='url(\\'${img}\\')'">
+                    <div class="w-full h-full bg-cover bg-center hover:scale-110 transition-transform duration-500" style="background-image: url('${img}');"></div>
+                </div>`).join('');
+            // show +N overlay on last thumb if more images
+            if (images.length > 4) {
+                const lastThumb = thumbGrid.lastElementChild;
+                const overlay = document.createElement('div');
+                overlay.className = 'absolute inset-0 bg-black/50 flex items-center justify-center text-white font-bold text-lg pointer-events-none';
+                overlay.textContent = `+${images.length - 4}`;
+                lastThumb.style.position = 'relative';
+                lastThumb.appendChild(overlay);
+            }
+        }
+
+        // ── Key stats bar
+        const statsValues = document.querySelectorAll('.grid.grid-cols-2.md\\:grid-cols-4 p.text-base.font-bold');
+        if (statsValues[0]) statsValues[0].textContent = `${p.bedrooms || 0} Oda`;
+        if (statsValues[1]) statsValues[1].textContent = `${p.bathrooms || 0} Banyo`;
+        if (statsValues[2]) statsValues[2].textContent = `${p.area || 0} m²`;
+        if (statsValues[3]) statsValues[3].textContent = p.yearBuilt || '-';
+
+        // ── Description
+        const descContainer = document.querySelector('.space-y-4 .text-gray-600.dark\\:text-gray-300');
+        if (descContainer && p.description) {
+            descContainer.innerHTML = `<p>${p.description}</p>`;
+        }
+
+        // ── Features / Amenities
+        const featuresGrid = document.querySelector('.space-y-6 .grid.grid-cols-2.md\\:grid-cols-3');
+        if (featuresGrid) {
+            if (p.features && p.features.length > 0) {
+                featuresGrid.innerHTML = p.features.map(f => `
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-platinum dark:border-gray-800 hover:border-primary/30 dark:hover:border-blue-500/30 transition-colors">
+                        <span class="material-symbols-outlined text-primary dark:text-gray-200">${FEATURE_ICONS[f] || 'check_circle'}</span>
+                        <span class="text-[#131416] dark:text-gray-200 font-medium">${f}</span>
+                    </div>`).join('');
+            } else {
+                featuresGrid.innerHTML = '<p class="col-span-full text-sm text-gray-400">No features listed for this property.</p>';
+            }
+        }
+
+        // ── Sidebar: price, status badge, ref
+        const totalPriceLabel = document.querySelector('span.text-gray-500.dark\\:text-gray-400.text-sm.font-medium');
+        if (totalPriceLabel) totalPriceLabel.textContent = p.status === 'rent' ? 'Monthly Rent' : 'Total Price';
+
+        const statusBadge = document.querySelector('.inline-flex.items-center.px-2\\.5');
+        if (statusBadge) {
+            statusBadge.textContent = p.status === 'rent' ? 'For Rent' : 'For Sale';
+            statusBadge.className = `inline-flex items-center px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wide ${p.status === 'rent' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100' : 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100'}`;
+        }
+
+        const priceH2 = document.querySelector('h2.text-3xl.md\\:text-4xl.font-extrabold');
+        if (priceH2) priceH2.textContent = formatPrice(p.price);
+
+        const refP = document.querySelector('p.text-sm.text-gray-500.dark\\:text-gray-400');
+        if (refP) refP.textContent = `Ref: #${p.id.slice(-6).toUpperCase()}`;
+
+        // ── Load similar properties
+        loadSimilarProperties(p);
+    }
+
+    async function loadSimilarProperties(current) {
+        const container = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3.gap-6');
+        if (!container) return;
+
+        const q = query(
+            collection(db, 'properties'),
+            where('isActive', '==', true),
+            where('status', '==', current.status),
+            limit(5)
+        );
+
+        const snapshot = await getDocs(q);
+        const similar = [];
+        snapshot.forEach(d => { if (d.id !== current.id) similar.push({ id: d.id, ...d.data() }); });
+        // Sort client-side by newest first
+        similar.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+        const toShow = similar.slice(0, 3);
+
+        if (toShow.length === 0) {
+            container.parentElement.style.display = 'none';
+            return;
+        }
+
+        const fallback = 'https://placehold.co/800x600/e2e8f0/94a3b8?text=Resim+Yok';
+        container.innerHTML = toShow.map(p => {
+            const img = p.images?.[0] || fallback;
+            const label = p.status === 'sale' ? 'For Sale' : 'For Rent';
+            return `
+            <a href="details.html?id=${p.id}" class="bg-white dark:bg-[#1b2028] rounded-lg overflow-hidden border border-platinum dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow group block">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('${img}');"></div>
+                    <div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">${label}</div>
+                </div>
+                <div class="p-4 flex flex-col gap-2">
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-lg font-bold text-[#131416] dark:text-white truncate">${p.title}</h4>
+                        <p class="text-primary dark:text-blue-300 font-bold whitespace-nowrap ml-2">${formatPrice(p.price)}</p>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm truncate">${p.location?.district || ''}, ${p.location?.city || ''}</p>
+                    <div class="flex items-center gap-4 mt-2 text-sm text-gray-600 dark:text-gray-300">
+                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> ${p.bedrooms || 0}</span>
+                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shower</span> ${p.bathrooms || 0}</span>
+                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">square_foot</span> ${p.area || 0}m²</span>
+                    </div>
+                </div>
+            </a>`;
+        }).join('');
+    }
+
+    // ─── Tour form ────────────────────────────────────────────────────────────
+    document.getElementById('tour-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = e.target.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Sending...';
+        submitBtn.disabled = true;
+
+        const name = document.getElementById('tour-name').value;
+        const phone = document.getElementById('tour-phone').value;
+        const date = document.getElementById('tour-date').value;
+        const time = document.getElementById('tour-time').value;
+        const message = document.getElementById('tour-message').value;
+        const propertyTitle = document.querySelector('h1').innerText.trim();
+
+        try {
+            await addDoc(collection(db, 'events'), {
+                title: `Tour: ${propertyTitle}`,
+                clientName: name,
+                clientPhone: phone,
+                date: date,
+                time: time,
+                notes: message,
+                type: 'viewing',
+                status: 'pending',
+                createdAt: serverTimestamp()
+            });
+
+            await addDoc(collection(db, 'notifications'), {
+                title: 'New Tour Request',
+                message: `${name} has requested a tour for "${propertyTitle}" on ${date} at ${time}.`,
+                type: 'event',
+                isRead: false,
+                createdAt: serverTimestamp(),
+                link: '/calendar'
+            });
+
+            document.getElementById('tour-form').classList.add('hidden');
+            document.getElementById('tour-success').classList.remove('hidden');
+            e.target.reset();
+        } catch (error) {
+            console.error("Tour request error:", error);
+            alert("An error occurred. Please try again.");
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('tour-date').setAttribute('min', today);
+
+    // Init
+    document.addEventListener('DOMContentLoaded', loadProperty);
+</script>
+
 </body></html>

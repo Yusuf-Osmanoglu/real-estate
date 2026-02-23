@@ -1,7 +1,22 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, Building2, Calendar, BarChart3, Settings, LogOut } from 'lucide-react';
+import { auth } from '../firebase';
+import { signOut } from 'firebase/auth';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function Sidebar() {
+  const navigate = useNavigate();
+  const { currentUser } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate('/login');
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
+
   return (
     <aside className="w-64 bg-white border-r border-gray-200 flex flex-col h-screen sticky top-0">
       <div className="p-6 flex items-center gap-3">
@@ -81,15 +96,21 @@ export default function Sidebar() {
         
         <div className="flex items-center justify-between px-3 py-2">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
-              <img src="https://i.pravatar.cc/150?img=11" alt="Emre Yılmaz" className="w-full h-full object-cover" />
+            <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold overflow-hidden">
+              {currentUser?.email?.charAt(0).toUpperCase() || 'U'}
             </div>
-            <div>
-              <p className="text-sm font-medium text-gray-900">Emre Yılmaz</p>
+            <div className="overflow-hidden">
+              <p className="text-sm font-medium text-gray-900 truncate" title={currentUser?.email || 'User'}>
+                {currentUser?.email?.split('@')[0] || 'User'}
+              </p>
               <p className="text-xs text-gray-500">Admin</p>
             </div>
           </div>
-          <button className="text-gray-400 hover:text-gray-600">
+          <button 
+            onClick={handleLogout}
+            className="text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0"
+            title="Sign Out"
+          >
             <LogOut size={18} />
           </button>
         </div>

@@ -53,11 +53,10 @@
 <div class="hidden lg:flex items-center gap-8">
 <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="search_results.html?status=buy">Buy</a>
 <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="search_results.html?status=rent">Rent</a>
-<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Projects</a>
 <a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="about.html">About</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="flex h-10 px-6 items-center justify-center rounded bg-white text-primary hover:bg-platinum text-sm font-bold transition-colors shadow-lg">
+<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="flex h-10 px-6 items-center justify-center rounded bg-white text-primary hover:bg-platinum text-sm font-bold transition-colors shadow-lg">
                     Contact
                 </button>
 </div>
@@ -95,7 +94,7 @@
 <label class="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">Type</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">home</span>
-<select name="type" class="w-full h-12 pl-10 pr-4 bg-gray-50 border border-gray-200 rounded text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none appearance-none transition-all hover:bg-white cursor-pointer">
+<select name="type" class="w-full h-12 pl-10 pr-10 bg-gray-50 border border-gray-200 rounded text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none appearance-none transition-all hover:bg-white cursor-pointer">
 <option value="">All Types</option>
 <option value="villa">Villa</option>
 <option value="apartment">Apartment</option>
@@ -109,7 +108,7 @@
 <label class="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">Price Range</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">payments</span>
-<select name="price" class="w-full h-12 pl-10 pr-4 bg-gray-50 border border-gray-200 rounded text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none appearance-none transition-all hover:bg-white cursor-pointer">
+<select name="price" class="w-full h-12 pl-10 pr-10 bg-gray-50 border border-gray-200 rounded text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none appearance-none transition-all hover:bg-white cursor-pointer">
 <option value="">Any Price</option>
 <option value="0-1m">Up to 1M ₺</option>
 <option value="1m-5m">1M - 5M ₺</option>
@@ -161,115 +160,11 @@
                 <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
 </a>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Listing Card 1 -->
-<a href="details.html" class="group bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-<div class="relative h-64 overflow-hidden">
-<img alt="Modern white luxury villa exterior with pool" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern white villa exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNaYBL4pPD0bmlsoKMIbKaCN-q1UjKHno3Y2AxaBFC4LrY5t5stkAGOC1-iuzoc53YmK4aMzrqomXzLF8qUAMhyMRj7XduAfkNnlXWtLz22Smg6G1PTtYSodb9W7-jA5Toq0tCGXXGqntYrpL_JhrGBJbyTipD5KlOCZ-WM8KUmFUzbJmSIMeADoJ6R04u6-I5UPJqQInnUw1eRbv8yM3-lWYMbVs01ZoqKopglxA00QZzeY5AAU2oe6Gqund17lhmTv5-_Uvb_Q0"/>
-<div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">
-                        For Sale
-                    </div>
-<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-colors cursor-pointer shadow-lg">
-<span class="material-symbols-outlined block text-[20px]">favorite</span>
+<div id="featured-properties-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Properties will be loaded here dynamically -->
+<div class="col-span-full flex justify-center py-12">
+    <span class="material-symbols-outlined animate-spin text-primary text-4xl">sync</span>
 </div>
-</div>
-<div class="p-6 flex flex-col flex-grow">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-xl font-bold text-primary truncate pr-2">Bosphorus View Villa</h3>
-<p class="text-lg font-extrabold text-primary whitespace-nowrap">$2,500,000</p>
-</div>
-<div class="flex items-center gap-1 text-gray-500 text-sm mb-6">
-<span class="material-symbols-outlined text-[18px]">location_on</span>
-                        Istanbul, Sariyer
-                    </div>
-<div class="mt-auto grid grid-cols-3 gap-4 py-4 border-t border-gray-100">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-gray-400">bed</span>
-<span class="text-sm font-bold text-primary">5 Bed</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-gray-400">bathtub</span>
-<span class="text-sm font-bold text-primary">4 Bath</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-gray-400">square_foot</span>
-<span class="text-sm font-bold text-primary">450 m²</span>
-</div>
-</div>
-</div>
-</a>
-<!-- Listing Card 2 -->
-<a href="details.html" class="group bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-<div class="relative h-64 overflow-hidden">
-<img alt="Interior living room with large glass windows and sea view" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern living room interior with sea view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz5CzcYHr3mCtt1VoI-iDnCBNsssFJqwk-9N8jqZfMEq5ICvWClL4r9HFfP47f5navmkSewG90tw6YpeGEBywj-DmAay45CSYjrloWCXPyxtqJQBUT__rcOUmSx6jDGOWWjslJqmd_-Dpr6Iq3nA52xM-GeGNGlNs1MXmbAGQ9R3FkyalgHaWYT-bGfRX2O-9b5_RCxVFOXiRF9wgi5VlNQczgT8xH9j1VkgFUwknjESES0If_pHu_S_wpk8LqRMwqOmypsLgGnBY"/>
-<div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">
-                        For Sale
-                    </div>
-<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-colors cursor-pointer shadow-lg">
-<span class="material-symbols-outlined block text-[20px]">favorite</span>
-</div>
-</div>
-<div class="p-6 flex flex-col flex-grow">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-xl font-bold text-primary truncate pr-2">Seaside Mansion</h3>
-<p class="text-lg font-extrabold text-primary whitespace-nowrap">$4,200,000</p>
-</div>
-<div class="flex items-center gap-1 text-gray-500 text-sm mb-6">
-<span class="material-symbols-outlined text-[18px]">location_on</span>
-                        Bodrum, Yalikavak
-                    </div>
-<div class="mt-auto grid grid-cols-3 gap-4 py-4 border-t border-gray-100">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-gray-400">bed</span>
-<span class="text-sm font-bold text-primary">6 Bed</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-gray-400">bathtub</span>
-<span class="text-sm font-bold text-primary">6 Bath</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-gray-400">square_foot</span>
-<span class="text-sm font-bold text-primary">600 m²</span>
-</div>
-</div>
-</div>
-</a>
-<!-- Listing Card 3 -->
-<a href="details.html" class="group bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-<div class="relative h-64 overflow-hidden">
-<img alt="High rise modern apartment building exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern apartment building exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlwn7K899CAP16PuZ3LaSPug1EHT9kUDjv9F1RYskLfM1HzXtJxmRJHDElCXNSRzlHBL2DmHGXysh4YOHVbNIwnqKZei9qsz_vpqe-gljq3exGFdN72qH1L6Ih1C_huroS5cmu-PTNB4b0kKESRaSQVN6GFQFluvDxSBjMjoLYJAgcqRoafOMJgZ-EWmg1X_u0nZVLFmUqVVE67s_wMcjVe7p2N_dFvkEpmI7dV2NAbj8t03GDrGHEMk4L4RVMiS6Ib6ySupUiTJw"/>
-<div class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">
-                        New Project
-                    </div>
-<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-colors cursor-pointer shadow-lg">
-<span class="material-symbols-outlined block text-[20px]">favorite</span>
-</div>
-</div>
-<div class="p-6 flex flex-col flex-grow">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-xl font-bold text-primary truncate pr-2">Skyline Penthouse</h3>
-<p class="text-lg font-extrabold text-primary whitespace-nowrap">$1,850,000</p>
-</div>
-<div class="flex items-center gap-1 text-gray-500 text-sm mb-6">
-<span class="material-symbols-outlined text-[18px]">location_on</span>
-                        Istanbul, Besiktas
-                    </div>
-<div class="mt-auto grid grid-cols-3 gap-4 py-4 border-t border-gray-100">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-gray-400">bed</span>
-<span class="text-sm font-bold text-primary">3 Bed</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-gray-400">bathtub</span>
-<span class="text-sm font-bold text-primary">3 Bath</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-gray-400">square_foot</span>
-<span class="text-sm font-bold text-primary">280 m²</span>
-</div>
-</div>
-</div>
-</a>
 </div>
 </section>
 <!-- Why Choose Us / Services -->
@@ -359,6 +254,44 @@
 </form>
 </div>
 </section>
+<!-- Contact Modal -->
+<div id="contact-modal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="document.getElementById('contact-modal').classList.add('hidden')"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-sm bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden">
+        <div class="flex items-center justify-between p-5 border-b border-gray-100">
+            <h3 class="text-lg font-bold text-primary">Get in Touch</h3>
+            <button onclick="document.getElementById('contact-modal').classList.add('hidden')" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col gap-4">
+            <p class="text-sm text-gray-500 mb-2">How would you like to contact us?</p>
+            <a href="https://wa.me/905XXXXXXXXX" target="_blank"
+               class="flex items-center gap-4 p-4 rounded-xl border-2 border-[#25D366] hover:bg-[#25D366]/5 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.859L.057 23.514a.75.75 0 0 0 .93.93l5.663-1.476A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.66-.513-5.183-1.408l-.371-.22-3.863 1.007 1.028-3.748-.242-.389A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-900 group-hover:text-[#25D366] transition-colors">WhatsApp</p>
+                    <p class="text-sm text-gray-400">Message us for a quick response</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-300 ml-auto">chevron_right</span>
+            </a>
+            <a href="mailto:info@luxeestates.com"
+               class="flex items-center gap-4 p-4 rounded-xl border-2 border-primary/20 hover:bg-primary/5 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-white">mail</span>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-900 group-hover:text-primary transition-colors">Email</p>
+                    <p class="text-sm text-gray-400">info@luxeestates.com</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-300 ml-auto">chevron_right</span>
+            </a>
+        </div>
+    </div>
+</div>
+
 <!-- Footer -->
 <footer class="bg-[#151e2e] text-white pt-20 pb-10 border-t border-white/5">
 <div class="container mx-auto px-6 lg:px-12">
@@ -421,4 +354,117 @@
 </div>
 </div>
 </footer>
+
+<!-- Firebase & Dynamic Content Logic -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, query, where, limit, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    // Firebase configuration
+    const firebaseConfig = {
+        apiKey: "YOUR_FIREBASE_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "1:YOUR_MESSAGING_SENDER_ID:web:0b3e4cd52c17d0406c24bc",
+        measurementId: "YOUR_MEASUREMENT_ID"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Format price
+    const formatPrice = (price) => {
+        return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY', maximumFractionDigits: 0 }).format(price);
+    };
+
+    // Fetch and render featured properties
+    async function loadFeaturedProperties() {
+        const container = document.getElementById('featured-properties-container');
+        
+        try {
+            // Query active properties, limit to 3
+            const q = query(
+                collection(db, 'properties'),
+                where('isActive', '==', true),
+                limit(6)
+            );
+            
+            const querySnapshot = await getDocs(q);
+            
+            if (querySnapshot.empty) {
+                container.innerHTML = '<div class="col-span-full text-center text-gray-500 py-12">No listings available yet.</div>';
+                return;
+            }
+
+            // Sort client-side by createdAt desc, take first 3
+            const allDocs = [];
+            querySnapshot.forEach(doc => allDocs.push({ id: doc.id, ...doc.data() }));
+            allDocs.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+            const properties = allDocs.slice(0, 3);
+            let html = '';
+            properties.forEach(({ id, ...property }) => {
+                // Default image if none exists
+                const imageUrl = property.images && property.images.length > 0 
+                    ? property.images[0] 
+                    : 'https://placehold.co/800x600/e2e8f0/94a3b8?text=Resim+Yok';
+                
+                const statusText = property.status === 'sale' ? 'For Sale' : 'For Rent';
+                const statusColor = property.status === 'sale' ? 'bg-primary' : 'bg-blue-600';
+
+                html += `
+                <a href="details.html?id=${id}" class="group bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img alt="${property.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="${imageUrl}"/>
+                        <div class="absolute top-4 left-4 ${statusColor} text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">
+                            ${statusText}
+                        </div>
+                        ${property.isFeatured ? `
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">
+                            Featured
+                        </div>
+                        ` : ''}
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-primary truncate pr-2">${property.title}</h3>
+                            <p class="text-lg font-extrabold text-primary whitespace-nowrap">${formatPrice(property.price)}</p>
+                        </div>
+                        <div class="flex items-center gap-1 text-gray-500 text-sm mb-6">
+                            <span class="material-symbols-outlined text-[18px]">location_on</span>
+                            ${property.location?.city || ''}, ${property.location?.district || ''}
+                        </div>
+                        <div class="mt-auto grid grid-cols-3 gap-4 py-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-gray-400">bed</span>
+                                <span class="text-sm font-bold text-primary">${property.bedrooms || 0} Bed</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-gray-400">bathtub</span>
+                                <span class="text-sm font-bold text-primary">${property.bathrooms || 0} Bath</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-gray-400">square_foot</span>
+                                <span class="text-sm font-bold text-primary">${property.area || 0} m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                `;
+            });
+            
+            container.innerHTML = html;
+            
+        } catch (error) {
+            console.error("Error fetching properties:", error);
+            container.innerHTML = '<div class="col-span-full text-center text-red-500 py-12">An error occurred while loading listings.</div>';
+        }
+    }
+
+    // Load properties when DOM is ready
+    document.addEventListener('DOMContentLoaded', loadFeaturedProperties);
+</script>
+
 </body></html>

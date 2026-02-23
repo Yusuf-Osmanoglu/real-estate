@@ -66,11 +66,10 @@
 <div class="hidden lg:flex items-center gap-8">
 <a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="search_results.html?status=buy">Buy</a>
 <a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="search_results.html?status=rent">Rent</a>
-<a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="#">Projects</a>
 <a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white text-sm font-medium transition-colors" href="about.html">About</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="flex h-10 px-6 items-center justify-center rounded bg-primary text-white hover:bg-primary-dark text-sm font-bold transition-colors shadow-lg">
+<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="flex h-10 px-6 items-center justify-center rounded bg-primary text-white hover:bg-primary-dark text-sm font-bold transition-colors shadow-lg">
                     Contact
                 </button>
 </div>
@@ -303,4 +302,43 @@
 </div>
 </footer>
 </div>
+
+<!-- Contact Modal -->
+<div id="contact-modal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="document.getElementById('contact-modal').classList.add('hidden')"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-sm bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
+        <div class="flex items-center justify-between p-5 border-b border-gray-100 dark:border-slate-700">
+            <h3 class="text-lg font-bold text-primary dark:text-white">Get in Touch</h3>
+            <button onclick="document.getElementById('contact-modal').classList.add('hidden')" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col gap-4">
+            <p class="text-sm text-gray-500 dark:text-slate-400 mb-2">How would you like to contact us?</p>
+            <a href="https://wa.me/905XXXXXXXXX" target="_blank"
+               class="flex items-center gap-4 p-4 rounded-xl border-2 border-[#25D366] hover:bg-[#25D366]/5 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.859L.057 23.514a.75.75 0 0 0 .93.93l5.663-1.476A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.66-.513-5.183-1.408l-.371-.22-3.863 1.007 1.028-3.748-.242-.389A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-900 dark:text-white group-hover:text-[#25D366] transition-colors">WhatsApp</p>
+                    <p class="text-sm text-gray-400">Message us for a quick response</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-300 ml-auto">chevron_right</span>
+            </a>
+            <a href="mailto:info@luxeestates.com"
+               class="flex items-center gap-4 p-4 rounded-xl border-2 border-primary/20 hover:bg-primary/5 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-white">mail</span>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Email</p>
+                    <p class="text-sm text-gray-400">info@luxeestates.com</p>
+                </div>
+                <span class="material-symbols-outlined text-gray-300 ml-auto">chevron_right</span>
+            </a>
+        </div>
+    </div>
+</div>
+
 </body></html>
