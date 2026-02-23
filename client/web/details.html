@@ -440,13 +440,15 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getFirestore, collection, addDoc, doc, getDoc, query, where, limit, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
+    // ⚠️  Replace these values with your own Firebase project config.
+    // See README.md → "Configure the Public Website" for instructions.
     const firebaseConfig = {
         apiKey: "YOUR_FIREBASE_API_KEY",
         authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
         projectId: "YOUR_PROJECT_ID",
         storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
         messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-        appId: "1:YOUR_MESSAGING_SENDER_ID:web:0b3e4cd52c17d0406c24bc"
+        appId: "YOUR_APP_ID"
     };
 
     const app = initializeApp(firebaseConfig);
